@@ -1,6 +1,6 @@
-﻿**3D Terrain Generation With Perlin Noise**
+﻿# 3D Terrain Generation With Perlin Noise
 
-1. Introduction
+## 1. Introduction
 
 In this academic report we are going to develop a 3D Terrain Generator that helps people who are cartographers digitizing representative maps of the world, artists or designers investing their own works, or videogame developers in creating, producing, and generating the necessary maps for the proper development of the video game.
 
@@ -8,7 +8,7 @@ To solve this problem, cartographers, artists, designers and developers use Perl
 
 Since its invention, Perlin noise has been extended and modified in various ways to suit different applications. For example, Simplex noise is a variant of Perlin noise that is faster to compute and has a more isotropic property, which means that it is more suitable for applications such as terrain generation.
 
-2. Literature Review/Background
+## 2. Literature Review/Background
 
 Perlin noise has wide applications in computer graphics, simulations, and other forms of procedural generation. Here are some concrete examples:
 
@@ -34,7 +34,7 @@ Perlin noise allows you to visualize your data in a more intuitive and natural w
 
 Perlin noise can be used to create random sound effects like wind or water. By using noise to control the frequency and amplitude of sound waves, you can create natural and dynamic effects.
 
-3. Methods Variables
+## 3. Methods Variables
 
 <div>
 <p style = 'text-align:center;'>
@@ -68,7 +68,7 @@ In the “draw()” function we define angleMode in degrees for practicality rea
 
 6 variables: the variable called 'X' rotate the map on the X axis, the variable called 'Y' rotate the map on the Yaxis and the variable called 'Z' rotate the map on the Z axis, the variable called 'tam' controls the size of the map, the variable called 'mul' controls the modification limits of the map and the variable called 'noisy' controls the Perlin Noise generation of the map. Then we map Perlin Noise into 'terrainValues' list, apply triangle\_strip shape to the vertices, apply the triangle shape to the set of vertices, apply different colors according to the height of the vertices, and load the Perlin Noise data stored in the 'terrainValues' list to each pair of connected vertices.
 
-4. Results
+## 4. Results
 
 <div>
 <p style = 'text-align:center;'>
@@ -88,7 +88,7 @@ In the “draw()” function we define angleMode in degrees for practicality rea
 </p>
 </div>
 
-5. Discussion
+## 5. Discussion
 
 Perlin noise is a sort of gradient noise that is used in computer graphics, simulation, and other procedural generation methods. It is named after its inventor, Ken Perlin. It is a random function that produces a pattern of numbers that changes gradually across a specified space.
 
@@ -102,7 +102,7 @@ The resulting pattern of values can be used for a variety of purposes, such as g
 
 Perlin noise has been widely used in video games, computer-generated imagery, and other forms of digital media to add depth, complexity, and realism to virtual environments. Its ability to generate complex and varied patterns of values has made it a popular tool for artists, designers, and programmers alike.
 
-6. Conclusion
+## 6. Conclusion
 
 In conclusion, 3D terrain generation using Perlin noise has become a popular and effective technique for creating realistic and varied landscapes in video games, virtual environments, and simulations. By combining multiple layers of noise with different frequencies and amplitudes, it is possible to create complex and varied terrain that appears natural and organic.
 
