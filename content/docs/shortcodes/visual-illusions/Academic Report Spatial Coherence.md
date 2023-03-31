@@ -1,12 +1,12 @@
-﻿**Spatial Coherence**
+﻿# Spatial Coherence
 
-1. Introduction
+## 1. Introduction
 
 Spatial coherence is a technique used to preserve the structural integrity of images by retaining the spatial relationships between pixels. The Pixelator video application takes advantage of this technique to create pixelated videos with smooth transitions between frames.
 
 At its core, the pixelator video application uses the power of spatial coherence to analyze and manipulate the pixels in a video stream. This means that as you use the application each pixel is carefully analyzed and manipulated in relation to its surrounding pixels, resulting in a cohesive and visually stunning end result.
 
-2. Literature Review/Background
+## 2. Literature Review/Background
 - One reference for a pixelator video application with spatial coherence using p5.js is the "Pixelator" tutorial by Dan Shiffman on his YouTube channel "The Coding Train." In this tutorial, Shiffman demonstrates how to use p5.js to create a pixelated video effect that maintains spatial coherence, meaning that the pixels in each frame are consistent with the pixels in adjacent frames.
 
 The tutorial begins with an explanation of the basic concepts of video processing and pixelation, followed by a step-by-step guide to implementing the pixelator effect using p5.js. Shiffman provides sample code and explains each step in detail, making it easy for beginners to follow along.
@@ -22,7 +22,7 @@ M. Smith and Scott Kildall. Available at: [https://www.academia.edu/32193047/Pix
 - Pixelator: A Video Application with Spatial Coherence Using P5.js on GitHub. Available at: h[ttps://github.com/kildall/pixelator](https://github.com/kildall/pixelator)
 - Video Pixelation with P5.js by Shiffman. Available at: <https://www.youtube.com/watch?v=nMUMZ5YRxHI>
 - Pixelating Images with Processing by Ben Fry. Available at: <http://benfry.com/writing/archives/37>
-3. Methods
+## 3. Methods
 1. function setup()
 
 <div>
@@ -107,7 +107,7 @@ The code snippet first displays a video on the canvas using the image() function
 
 The pixelate() function is likely a custom function that pixelates the image, either by reducing the resolution or by applying a pixelation effect. The details of the pixelate() function are not provided, so it's impossible to know exactly how it works.
 
-4. Results
+## 4. Results
 
 
 
@@ -125,7 +125,7 @@ The pixelate() function is likely a custom function that pixelates the image, ei
 | - | - |
 |![results](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjcd8LKmB4ntqqiOLIZ_p7nP56ObX9yQ7kbhAdGJbCw9oWWZzJatiISK2edDjdLQg5WzkiGCKUXqqxfw6JCp3cbfH0RMXzLFJYbI1qIAA5QIsG4hbuw4Jx1FSxllb4sXzCFEgJhWU69fbYK2lzGtQTWb06E_fwJURkvSNq6r_R0jCXwOTy5xPqY0rhs/w613-h462/Aspose.Words.aceba8f3-33af-46ac-b851-3fefd2b8b8ac.008.jpeg)|![results](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjyfPNkNCYPqb_Zgeu6seOsoZnVg6rV38SBFBZHOiFRmyWfDWrIHHPL26nWjNyNld5S2ayAo9sigHpf5IH0OJumAh8c2HU7bycFYPzNzdZDF-abCglCOsAxK2zLDsXPQ5DQY9n2uVqubnxb2kyirU3E9osUHySiIfd7UDrwYKl1RAxd1cVcskVU82vk/w611-h813/Aspose.Words.aceba8f3-33af-46ac-b851-3fefd2b8b8ac.009.jpeg)|
 
-5. Discussion
+## 5. Discussion
 
 Pixelation is a technique used in video and animation to reduce image resolution, usually for aesthetic reasons. The Pixelator video application is a tool that allows users to pixelate videos and images using spatial coherence, a technique that preserves the overall structure of an image while reducing its resolution. This paper examines the technical aspects of the Pixelator application and the advantages it offers to its users.
 
@@ -135,7 +135,7 @@ The spatial coherence technique used in the Pixelator application enhances the p
 
 The Pixelator video application offers several advantages to its users. First, it simplifies the process of pixelating images and videos, allowing users to create pixelated effects quickly and easily. Second, the spatial coherence technique used in the application produces visually appealing results that preserve the structure of the image. Third, the application is built using p5.js, which makes it easy to customize and extend.
 
-6. Conclusion
+## 6. Conclusion
 
 The Pixelator video application is an excellent tool for anyone looking to create pixelated effects in their videos or images. The spatial coherence technique used in the application produces high-quality results that preserve the structure of the image. Additionally, the use of p5.js makes the application easy to customize and extend. Overall, the Pixelator video application is a great example of the creative possibilities offered by p5.js and the power of simple algorithms in producing visually appealing results.
 

@@ -1,6 +1,6 @@
-﻿**Moiré Patterns**
+﻿# Moiré Patterns
 
-1. Introduction
+## 1. Introduction
 
 In mathematics, physics, and art, moiré patterns or moiré fringes are large-scale interference patterns that can be produced when a partially opaque ruled pattern with  transparent  gaps  is  overlaid  on  another  similar  pattern.  For  the  moiré interference  pattern  to  appear,  the  two  patterns  must  not  be  completely identical, but rather displaced, rotated, or have slightly different pitch[^1].  
 
@@ -10,7 +10,7 @@ In  order  to  visualize  different  illusions  that  can  be  generated  from  
 
 Additionally,  the  generated  codes  will  be  described  in  the  Methods  section, followed by an analysis of the results, a discussion of these results and finally, the conclusions obtained will be shown.
 
-2. Literature Review/Background
+## 2. Literature Review/Background
 
 Moiré  patterns  are  often  an  artifact  of  images  produced  by  various  digital imaging  and  computer  graphics  techniques,  for  example  when  scanning  a halftone picture or ray tracing a checkered plane[^3]. More frequently, the moiré effect occurs between overlapping transparent objects[^4]. 
 
@@ -34,14 +34,35 @@ Moiré patterns can find use in the following applications[^8]:
 - Marine navigation
 - Strain measurement
 - Image processing
-3. Methods. 
-1. *First Program - Kinegram.* 
 
-<div>
-<p style = 'text-align:center;'>
-<img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjTi9pox-nBdJJLvMMyScQTZwEM7cQfpmagz7t936RpaCPAFaUZf46CljiXvNXrGXg-LJ4xtpU3qR1GbbULTzm7OuHpvQf26aaVOSmksrCx7F-Y16eUC6fs-EqymCHyZky3389XW_18z6QOsl-ndEkxBYnIR3YK8wKOL50ULg5dMql3QE6F1oOte_DU/w606-h581/Imagen5.png" alt="draw" width=100%>
-</p>
-</div>
+## 3. Methods. 
+
+### 3.1. *First Program - Kinegram.* 
+{{< details "Code" open >}}
+```javascript
+let img;
+
+function preload() {
+  img = loadImage('../../../../sketches/kinegram_animal.jpg');
+}
+
+function setup() {
+  createCanvas(550, 300);
+}
+
+function draw() {
+  strokeWeight(5);
+  background(255);
+  image(img, 0, -50, 500, 400);
+  
+  let c = 0
+  while (c < 500) {
+    line(c + mouseX - 250, 20, c + mouseX - 250, 270)
+    c += 9
+  }
+}
+```
+{{< /details >}}
 
 In the preload() function, the image [9] to be used to display the kinegram is loaded. 
 
@@ -49,13 +70,40 @@ In the setup() function, the canvas on which the animation will be generated is 
 
 In the draw() function, the animation image is drawn. In addition, a mesh of lines spaced between them is defined, for this, a while loop is used that generates a line every 9 pixels, with a thickness of 5 and a height of 250 pixels, the location on the X axis of these depends on the location of the pointer on the X axis, thus generating a mesh on the figure that moves with the location of the pointer on the canvas.
 
-2. *Second Program - Circles.* 
+### 3.2. *Second Program - Circles.* 
+{{< details "Code" open >}}
+```javascript
+let diaMin = 20;
+let diaMax = 550;
+let diaStep = 6;
 
-<div>
-<p style = 'text-align:center;'>
-<img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhaRPzgVlI8Lzi6UPtTO1Jn_-RVD6WqJpQ2bWok4RqcpCeiYDxubO4PUWVUZFByfyp3H-Vla9onoBqY-LQ8NuRRO3KudiULGy9klTSx5cgLeQ_aO1B_DqjYlD6IPC23g06fmBWVzN9vFsSL2PCfiOUJmnaJF2q6fgyIEn9R68i4su5ZcrC5WL6XM3b4/w606-h824/Imagen6.png" alt="draw" width=100%>
-</p>
-</div>
+let angle = 0;
+
+function setup() {
+  createCanvas(550, 400);
+  
+  noFill()
+  stroke(0)
+  strokeWeight(diaStep/4)
+}
+
+function draw() {
+  background(255);
+  
+  var xx = sin(radians(angle))*100;
+  var yy = cos(radians(angle))*100;
+  
+  translate(width/2, height/2);
+  for (var dia=diaMin; dia<diaMax; dia+=diaStep) {
+    ellipse(-xx, yy, dia, dia);
+    ellipse(xx, yy, dia, dia);
+    ellipse(-xx, -yy, dia, dia);
+    ellipse(xx, -yy, dia, dia);
+  }
+  angle = angle + 1;
+}
+```
+{{< /details >}}
 
 In this program, we define the setup() function, here we just define the attributes of the circles that are going to be drawn in the draw() function.
 
@@ -63,29 +111,75 @@ In the draw function(), we define the variables xx and yy. These ones represent 
 
 Finally, we use a for cycle to draw the four initial circles and some more around them,  by  incrementing  the  diameter  of  them  until  a  maximum  diameter  is reached. 
 
-3. *Third Program - Lines.* 
+### 3.3. *Third Program - Lines.* 
 
-<div>
-<p style = 'text-align:center;'>
-<img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEg8R3tQ1CnIfSkaTAZj89aFRCY1QtksvtNZbBDwu4pEqBFp4SQx2HOVPYQv37innf483EE-59bKav_Ga7bm0yyaLlh-GVTF-Wq032weNsTVlOp8ZTnMtmNzjFZSQA6ijSKopXWB-tt7ADOnYgMFoUvBRVv-arg3mjYso2vE7K0RrauNFkpGR_3Urwox/w610-h568/Imagen7.png" alt="draw" width=100%>
-</p>
-</div>
+{{< details "Code" open >}}
+```javascript
+function setup() {
+  createCanvas(335, 400);
+}
+
+function draw() {  
+  background(255);
+  
+  strokeWeight(4);
+  let c1 = 0
+  while (c1 < 300) {
+    line(20, c1 + 150, 270, c1 + 150)
+    c1 += 7
+  }
+  
+  strokeWeight(3);
+  let c2 = 0
+  while (c2 < 300) {
+    line(60, c2 + mouseY - 150, 310, c2 + mouseY - 150)
+    c2 += 6
+  }
+}
+```
+{{< /details >}}
 
 In this program, we draw 2 meshes of lines in the draw() function. They are both horizontal lines but their Stroke Weight differs so the illusion of movement can be generated. Additionally, in the second while, where one of the meshes is drawn, the Y-axis coordinates move with the location of the pointer on this axis. In this way, one of the grids will overlap the other with the movement of the pointer that the user wishes.
 
-*3.4 Fourth Program - Lines and Circles.* 
+### 3.4. *Fourth Program - Lines and Circles.* 
 
-<div>
-<p style = 'text-align:center;'>
-<img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgr30RDagfwan1t08qYcxkt8t4gn2bs8Ibxj4qhGApCKQVmRGMggtEdn8s89fhEB7L3gwRS75BZ9BFNgLFSDOwXhd5By3YEBfnfvlXHAfCFifP9scUCCunK-MtWzpdIRov3bpLyLDebYsJawDgavDU7DNK_mVC62Xvh_xoRIsnTxNgyeN0wXwiaSJ7F/w612-h542/Imagen8.png" alt="draw" width=100%>
-</p>
-</div>
+{{< details "Code" open >}}
+```javascript
+let spacing = 7;
+let angle = 0;
+
+function setup() {
+  createCanvas(400, 400);
+}
+
+function draw() {
+  background(255);
+  stroke(0);
+  strokeWeight(0.75);
+  
+  for (let x = 0; x < width; x += spacing) {
+    for (let y = 0; y < height; y += spacing) {
+      let d = dist(x, y, width/2, height/2);
+      let offset = map(d, 0, dist(0, 0, width/2, height/2), -angle, angle);
+      line(x - offset, y + offset, x - offset, y - offset);
+      line(x + offset, y + offset, x + offset, y - offset);
+    }
+  }
+  
+  if (angle > 70) {
+    angle = 0
+  }
+  
+  angle += 0.05;
+}
+```
+{{< /details >}}
 
 In the last program, we define two variables: *spacing* and *angle*, the first one will define the distance between each line and the second one will define the angle of movement that the lines will have.
 
 In the draw() function is where the lines are drawn. We use two for loops to iterate through every possible position on the grid defined by spacing. For each pair of coordinates (x, y) in the grid, we calculate the distance d between that position and the center of the canvas. We then use the map() function to convert that distance into an offset value that will be applied to the position of the line on the y-axis or x-axis. Using the line() function, we draw different lines that move on each frame based on the offset value, thus generating an animation with Moiré patterns.
 
-4. Results 
+## 4. Results 
 - *First Program - Kinegram* 
 {{< p5-iframe sketch="/showcase/sketches/kinegram.js" width="600" height="324" >}}
 
@@ -100,13 +194,13 @@ In the draw() function is where the lines are drawn. We use two for loops to ite
 
 {{< p5-iframe sketch="/showcase/sketches/lines_circles.js" width="425" height="425" >}}
 
-5. Discussion
+## 5. Discussion
 
 With these programs we can see some examples of how Moiré patterns can be produced. Specifically, the Second, Third and Fourth Program, are all examples of Lines Moiré, and we can see how they can be really simple but effective (Third) or way more complex (Second and Fourth). Additionally, the First Program is an example of a Kinegram, an artistic product done using Shape Moiré.
 
 These examples are just simple representations of these patterns, but we could use them to create complex animations, fixing undesired patterns on screens and  TV,  or  even  marine  navigation,  as  mentioned  in  the  Literature Review/Background section.
 
-6. Conclusion
+## 6. Conclusion
 
 In  conclusion,  Moiré  patterns  appear  in  different  fields  such  as  animation, currency,  image  processing,  etc.  There  are two  main types  of patterns,  Line Moiré and Shape Moiré. In the first, only lines are used while in the second, shapes and lines appear. Finally, the kinegram is an artistic application created from Shape Moiré.
 
