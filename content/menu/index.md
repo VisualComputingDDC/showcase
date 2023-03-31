@@ -4,6 +4,7 @@ headless: true
 
 - **Shortcodes**
 - [p5]({{< relref "/docs/shortcodes/p5" >}})
+- [Group-Members]({{< relref "/docs/shortcodes/group-members" >}})
 - [Visual-Illusions]({{< relref "/docs/shortcodes/visual-illusions" >}})
 - [Buttons]({{< relref "/docs/shortcodes/buttons" >}})
 - [Columns]({{< relref "/docs/shortcodes/columns" >}})
