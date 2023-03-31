@@ -88,13 +88,8 @@ In the “draw()” function we define angleMode in degrees for practicality rea
 </p>
 </div>
 
-<<<<<<< HEAD
 {{< p5-iframe sketch="/showcase/sketches/3d_terrain_generation_with_perlin_noise.js" width="825" height="825" >}}
-
-5. Discussion
-=======
 ## 5. Discussion
->>>>>>> 3927dd3c90d144af8ce59234a15d720c460e786e
 
 Perlin noise is a sort of gradient noise that is used in computer graphics, simulation, and other procedural generation methods. It is named after its inventor, Ken Perlin. It is a random function that produces a pattern of numbers that changes gradually across a specified space.
 
