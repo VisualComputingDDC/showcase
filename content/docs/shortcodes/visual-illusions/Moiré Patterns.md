@@ -93,10 +93,11 @@ In the draw() function is where the lines are drawn. We use two for loops to ite
 {{< p5-iframe sketch="/showcase/sketches/circles.js" width="570" height="425" >}}
 
 - *Third Program - Lines*
-&emsp;<div>{{< p5-iframe sketch="/showcase/sketches/lines.js" width="350" height="425" >}}</div>
 
+{{< p5-iframe sketch="/showcase/sketches/lines.js" width="350" height="425" >}}
 
 - *Fourth Program - Lines and Circles* 
+
 {{< p5-iframe sketch="/showcase/sketches/lines_circles.js" width="425" height="425" >}}
 
 5. Discussion
