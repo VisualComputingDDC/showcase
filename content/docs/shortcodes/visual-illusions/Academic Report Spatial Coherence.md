@@ -25,7 +25,11 @@ M. Smith and Scott Kildall. Available at: [https://www.academia.edu/32193047/Pix
 3. Methods
 1. function setup()
 
-![setup](Aspose.Words.aceba8f3-33af-46ac-b851-3fefd2b8b8ac.001.png)
+<div>
+<p style = 'text-align:center;'>
+<img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgkUxxAW3ER8Y9SowSHgU1GAfRSV3pswThQReIVo6xCTdhcqPHVPS-xjkDcskG3f-lTFSryfIYa_TozM0LZcUcO5SXoo-DklfyoxYrfJdT4buEsUhkgyZAIrZ4uMIVoVTlqkzmL8dseFTzJWmG8MPyqH8C8zcBsfx6nBhJtBP-CN1y-bbq-hLwU2wlX/w613-h456/Aspose.Words.aceba8f3-33af-46ac-b851-3fefd2b8b8ac.001.png" alt="setup" width=100%>
+</p>
+</div>
 
 This code sets up a canvas in the web browser that displays a video feed from the user's webcam using p5.js library. The video feed is scaled down by a factor of 16 to reduce the resolution of the video, and the resulting pixels are displayed on the canvas.
 
@@ -43,7 +47,11 @@ In the "setup" function, the following occurs:
 - The "hide" function is called on the video capture object, which hides the video element from the web page.
 2. function pixelate()
 
-![pixelate](Aspose.Words.aceba8f3-33af-46ac-b851-3fefd2b8b8ac.002.png)
+<div>
+<p style = 'text-align:center;'>
+<img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgMb-0Vp-E7d8xaxeoxbBMYL5q9qwiUHAHk90TGoz4OO3DEqlIaXMFK7UpbftqmYDo5YUaywWcnuOzPj9UzLWZbUYBIpRnLf-_3rKjMMMCuEbhuIRy6Y3hG8rlhSxu2aOJf6ch7retzOt29jPXBjPbaC95alqMqvKUQnA2CxZ8bbhQ2uV7oEjc1-Ytv/w612-h837/Aspose.Words.aceba8f3-33af-46ac-b851-3fefd2b8b8ac.002.png" alt="pixelate" width=100%>
+</p>
+</div>
 
 This is a JavaScript function that pixelates an image. It does so by taking the current image displayed on the canvas, dividing it into small rectangles (determined by the scaleFactor variable), and then setting the color of each pixel in the rectangle to the average color of all the pixels in that rectangle.
 
@@ -85,7 +93,11 @@ This updates the canvas with the new pixel values.
 
 3. function draw()
 
-![draw](Aspose.Words.aceba8f3-33af-46ac-b851-3fefd2b8b8ac.003.png)
+<div>
+<p style = 'text-align:center;'>
+<img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgDeFfQKk8hPx8tMU6FOAlv3jqvpHzElFw8ev1LkeEDZOrDtot56L8GJGDuJ9nvAsCPG4asF2gmlIMk6kx3Ncy0TTarERGkz_LVslP4_fZWSNxlXAllwTeMDuaS25XyPprrAtOv7jzNLJ0kWvYxNpnjTJ08pxgUYeQCuU_ZXw4Gkws7TXitxZjXahmQ/w614-h204/Aspose.Words.aceba8f3-33af-46ac-b851-3fefd2b8b8ac.003.png" alt="draw" width=100%>
+</p>
+</div>
 
 This code is a part of a program that uses the p5.js library to manipulate and display visual content in a web browser.
 
@@ -101,17 +113,18 @@ The pixelate() function is likely a custom function that pixelates the image, ei
 
 |Normal picture|Picture with Spatial Coherence|
 | - | - |
-|![results](Aspose.Words.aceba8f3-33af-46ac-b851-3fefd2b8b8ac.004.jpeg)|![results](Aspose.Words.aceba8f3-33af-46ac-b851-3fefd2b8b8ac.005.jpeg)|
+|![results](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjbAENHXaHm1CCUBqEvjvVhX27849xsXRCKyVcl3HJIzPfnEbWKSQolEN4UjvA7RWvQgFNA8CAIksyFWqNat2wXId31a2p8C2Y-8rxH5iz2tobOjctyniRr_OYn7WhjODJmkc9rPv1uHBljZQuQXEzp8BpzQZkIu-hYSCpYgQ2brHNrfyB2X92uqhub/w612-h812/Aspose.Words.aceba8f3-33af-46ac-b851-3fefd2b8b8ac.004.png)|![results](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhtd-trnKrhrLAll_EuAV7mDsPLBez4Epi2XnxGIp82JEKNEHC3hQNyT5FsCrIKBaejQ9YFsElEYO9Hni34HA9pUj6puGbRxaenUDmL3S4GJfyqUKvQExiitWBRrE5icgzaLVwDml0XxUHRV5Zk7uhj6kiNJ99iI4GMSg7jeTIMJcybJwA3ICo04QCx/w607-h457/Aspose.Words.aceba8f3-33af-46ac-b851-3fefd2b8b8ac.005.jpeg)|
 
 
 |Normal picture|Picture with Spatial Coherence|
 | - | - |
-|![results](Aspose.Words.aceba8f3-33af-46ac-b851-3fefd2b8b8ac.006.jpeg)|![results](Aspose.Words.aceba8f3-33af-46ac-b851-3fefd2b8b8ac.007.jpeg)|
+|![results](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjosmj-TZC-BZ98Ila8VBdll2kyIinWx-YzweR-ppG7zGkqPIYQ2HVRtlivuRXA6BmKWHsHXn3VCHOtqZJXFb9mQGzlDjK4wWGhWfURCP4DcvLWBOXhlstSk0x5OmX0HWQyUjWjNy6hnqpi9eSsCSwHI4KBmHORZTGufdwWf_udJ1qLnjc61iLQI4j1/w606-h456/Aspose.Words.aceba8f3-33af-46ac-b851-3fefd2b8b8ac.006.png)|![results](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEg5vJPAPkO9W9ZXrjSOcfzBKg8zfVJtmo0HLoAuYJ5tgPWG3Te-9OoZ-alHXs0h9Qpi4mgoee0tErBX-fnr5Z7IhwUOjW5_DILuzHICrksHo7iRnt_9xcEipRooePcDjXKjmab7A4NxIXbNsQtPD6jHjfw5g8KQ83N4n5BxkeHLk8EmXAA2ZDzMOMln/w610-h458/Aspose.Words.aceba8f3-33af-46ac-b851-3fefd2b8b8ac.007.jpeg)|
 
 
 |Normal picture|Picture with Spatial Coherence|
 | - | - |
-|![results](Aspose.Words.aceba8f3-33af-46ac-b851-3fefd2b8b8ac.008.jpeg)|![results](Aspose.Words.aceba8f3-33af-46ac-b851-3fefd2b8b8ac.009.jpeg)|
+|![results](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjcd8LKmB4ntqqiOLIZ_p7nP56ObX9yQ7kbhAdGJbCw9oWWZzJatiISK2edDjdLQg5WzkiGCKUXqqxfw6JCp3cbfH0RMXzLFJYbI1qIAA5QIsG4hbuw4Jx1FSxllb4sXzCFEgJhWU69fbYK2lzGtQTWb06E_fwJURkvSNq6r_R0jCXwOTy5xPqY0rhs/w613-h462/Aspose.Words.aceba8f3-33af-46ac-b851-3fefd2b8b8ac.008.jpeg)|![results](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjyfPNkNCYPqb_Zgeu6seOsoZnVg6rV38SBFBZHOiFRmyWfDWrIHHPL26nWjNyNld5S2ayAo9sigHpf5IH0OJumAh8c2HU7bycFYPzNzdZDF-abCglCOsAxK2zLDsXPQ5DQY9n2uVqubnxb2kyirU3E9osUHySiIfd7UDrwYKl1RAxd1cVcskVU82vk/w611-h813/Aspose.Words.aceba8f3-33af-46ac-b851-3fefd2b8b8ac.009.jpeg)|
+
 5. Discussion
 
 Pixelation is a technique used in video and animation to reduce image resolution, usually for aesthetic reasons. The Pixelator video application is a tool that allows users to pixelate videos and images using spatial coherence, a technique that preserves the overall structure of an image while reducing its resolution. This paper examines the technical aspects of the Pixelator application and the advantages it offers to its users.
