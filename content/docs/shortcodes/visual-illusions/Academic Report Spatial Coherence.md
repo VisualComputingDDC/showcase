@@ -138,14 +138,3 @@ The Pixelator video application offers several advantages to its users. First, i
 ## 6. Conclusion
 
 The Pixelator video application is an excellent tool for anyone looking to create pixelated effects in their videos or images. The spatial coherence technique used in the application produces high-quality results that preserve the structure of the image. Additionally, the use of p5.js makes the application easy to customize and extend. Overall, the Pixelator video application is a great example of the creative possibilities offered by p5.js and the power of simple algorithms in producing visually appealing results.
-
-
-{{< p5-widget autoplay=true height="400" width="400" ver="1.5.0" >}}
-function setup() {
-  createCanvas(300, 300);
-}
-
-function draw() {
-  background(255, 0, 255);
-}
-{{< /p5-widget >}}
