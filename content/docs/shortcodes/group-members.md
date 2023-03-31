@@ -9,7 +9,7 @@ Lorem markdownum insigne...
 
 {{< details "Daniel Santiago Delgadillo Garcia" open>}}
 ## Daniel Santiago Delgadillo Garcia
-Lorem markdownum insigne...
+I am a Systems Engineering student at Universidad Nacional de Colombia. My interests in systems engineering include web development, data analysis, machine learning, and artificial intelligence, my interests in life include dancing, cycling and play video games. In this project, i worked on the 3D Generation Terrain With Perlin Noise section and the development of this website.
 {{< /details >}}
 
 {{< details "Daniel Felipe Vargas Gomez" open>}}
