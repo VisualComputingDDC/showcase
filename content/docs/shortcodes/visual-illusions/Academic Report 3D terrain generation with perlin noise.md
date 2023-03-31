@@ -34,7 +34,7 @@ Perlin noise allows you to visualize your data in a more intuitive and natural w
 
 Perlin noise can be used to create random sound effects like wind or water. By using noise to control the frequency and amplitude of sound waves, you can create natural and dynamic effects.
 
-## 3. Methods Variables
+## 3. Methods
 
 {{< details "Code" open >}}
 ```javascript
