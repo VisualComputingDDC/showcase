@@ -23,7 +23,6 @@ Look at this [brief explanation](https://p5js.org/examples/color-relativity.html
 {{< /details >}}
 
 {{< p5-iframe sketch="/showcase/sketches/colors.js" width="725" height="425" >}}
-{{< p5-iframe sketch="/showcase/sketches/kinegram.js" width="550" height="300" >}}
 
 ## Third party libraries
 

@@ -1,7 +1,7 @@
 let img;
 
 function preload() {
-  img = loadImage('kinegram_animal.jpg');
+  img = loadImage('../../../../sketches/kinegram_animal.jpg');
 }
 
 function setup() {
