@@ -14,5 +14,5 @@ I am a Systems Engineering student at Universidad Nacional de Colombia. My inter
 
 {{< details "Daniel Felipe Vargas Gomez" open>}}
 ## Daniel Felipe Vargas Gomez
-Lorem markdownum insigne...
+I am a Systems and Computation Engineering student at Universidad Nacional de Colombia. My interests in this career include software architecture, competitive programming and algorithms. My interests in life include music, movies and art in general. In this project, I worked on some Moiré Patterns programs.
 {{< /details >}}
