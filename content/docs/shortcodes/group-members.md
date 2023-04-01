@@ -1,7 +1,5 @@
 # Group Members
 
-Details shortcode is a helper for `details` html5 element. It is going to replace `expand` shortcode.
-
 {{< details "Juliana Catalina De Castro Moreno" open>}}
 ## Juliana Catalina De Castro Moreno
 Lorem markdownum insigne...
