@@ -1,6 +1,6 @@
-﻿Color Blindness
+﻿# Color Blindness
 
-1. Introduction
+## 1. Introduction
 
 In this academic report we are going to develop a color mapping application that helps people who are color blind see the colors around them. To introduce this topic color  blindness  is  a  disease  that  affects  a  significant  percentage  of  the  world's population, about 8% of the male population and 0.5% of women[^1]. It is a genetic disorder that affects the ability to differentiate between certain colors, making it difficult for sufferers to fully experience and appreciate the colors around them.
 
@@ -10,7 +10,7 @@ In addition, color mapping applications can help promote inclusion and diversity
 
 To sum up we create a color mapping for people with this disease using Javascript p5.js, you can see that with the use of an interactive camera from any computer or device with access to this, where the problem is corrected and performs a filter that results in the correction of color blindness. 
 
-2. Literature Review/Background 
+## 2. Literature Review/Background 
 1. Color Enhancing Mobile Application for Colorblind People: 
 
 The  authors  designed  a  mobile  application  that  enhances  color  perception  for colorblind  people.  The  application  works  by  capturing  an  image  using  the smartphone camera, and then processing the image to adjust the colors based on the user's  color  deficiency.  The  authors  conducted  a  user  study  with  12  colorblind participants and found that the application improved their color perception[^2]. 
@@ -27,7 +27,7 @@ The authors developed a mobile application that helps colorblind people identify
 
 The authors developed a mobile application that helps colorblind people distinguish colors in real-time. The application works by overlaying color filters on the camera feed, which enhances color perception for the user. The authors conducted a user study with 20 colorblind participants and found that the application improved their color perception[^5]. 
 
-3\.  Methods  
+## 3.  Methods  
 
 1. function setup()
 
@@ -81,7 +81,7 @@ Next, the function normalizes the new color values to the range [0, 255] to ensu
 
 Finally, the function returns an object with properties r, g, and b containing the mapped color values.
 
-4. Results   
+## 4. Results   
 
 
 
@@ -99,7 +99,7 @@ Finally, the function returns an object with properties r, g, and b containing t
 | - | - |
 |![](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiySh4EH9VkoBA0s_6UdZaJxv4UON2AmmnyPnAEjucyjYEY2L-LmVdHtPqPiV9ks_opZi5pp0O0cwNQYLTHZnFiDz0TNYkmrj9mPwByHGMUNrMZbLMZDcic6psUdgrcAVwxdT51AD1y8U45a6kmpUYFCa_UMXA3QfwW2D9ReZI4B5xVpBKK6hq4QkYI/w604-h454/Aspose.Words.b6ccd4e5-e4e7-47fc-8458-5b74fcd1364b.009.jpeg)|![](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEh2UyoD2nT3fBR9pdtJ8hvA_eiJiBojFS61B-z1QIjX65TWV9Adi7PKOnyjIE0fN4i6HUzznAGovDxMqWtpojFpRcN4qVFeXifLoMzw5hVK8D1CF1gAqgvHL-xvr1wVWQCrtMt9cgXThVGccZim9NDQNJ5RutT9wTImDF6dyYwsPO0tMD6t7U6riYrB/w604-h458/Aspose.Words.b6ccd4e5-e4e7-47fc-8458-5b74fcd1364b.010.jpeg)|
 
-5. Discussion  
+## 5. Discussion  
 
 Color blindness is a condition that affects millions of people worldwide, making it difficult  for  them  to  distinguish  between  different  colors.  However,  with  the advancements  in  technology,  several  color  mapping  applications  have  been developed that can help people who are color blind see the colors around them. In this report, we will discuss one such application, its features, and its effectiveness.
 
@@ -109,7 +109,7 @@ The  application  also  has  several  features  to  enhance  the  user's  experi
 
 To evaluate the effectiveness of ColorVision, we conducted a user study with ten participants who were color blind. The participants were asked to identify different colors  before  and  after  using  the  application.  The  results  showed  a  significant improvement  in  their  ability  to  distinguish  between  colors  after  using  the application. All participants reported that the application was easy to use and that the filters were effective in enhancing the colors.
 
-6. Conclusion  
+## 6. Conclusion  
 
 Color blindness affects most of the fields in which a person can develop in life, to exemplify this, we have the professional and personal part. It is essential to fully understand this disease and provide solutions that contribute to improve the quality of life of affected individuals and promote their access to new technologies, that is why this exercise was developed with color mapping so that people can see the grafts around them in the colors of real life. 
 

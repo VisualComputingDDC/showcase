@@ -1,18 +1,18 @@
-﻿**Color Average** 
+﻿# Color Average
 
-1. Introduction
+## 1. Introduction
 
 This  application  provides  a  unique  way  of  visualizing  and  modifying  videos  by reducing the resolution of the frames to create a pixelated effect.
 
 In addition to pixelation, the application also includes a color averaging feature that takes the average color of each pixel block and applies it to the entire block. This creates a uniform color effect across each block, giving the video a distinctive look. 
 
-2. Literature Review/Background 
+## 2. Literature Review/Background 
 - Pixelator Video: A Tutorial on Processing Video in p5.js by Daniel Shiffman - This video tutorial on YouTube walks you through creating a pixelator video using p5.js, including how to calculate color averages for each pixel block. 
 - Pixelate Video with p5.js by Brendan Sudol  - This blog post includes code examples for creating a pixelator video with p5.js, as well as how to calculate color averages.
 - Creating a Pixelated Video Effect with p5.js by Arielle Vaniderstine  - This tutorial on the freeCodeCamp website shows how to create a pixelator video using p5.js and also includes information on calculating color averages.
 - Pixelate  Video with JavaScript  and  HTML5 Canvas  by  Kyle  Wetton  - This tutorial on SitePoint shows how to create a pixelator video using HTML5 canvas and JavaScript, but could also be adapted to use p5.js.
 - Pixelate a video using P5.js by Saumya Pandey - This blog post includes a code example for creating a pixelator video with p5.js, including how to calculate color averages for each pixel block.
-3. Methods 
+## 3. Methods 
 1. function setup() 
 
 <div>
@@ -77,7 +77,7 @@ If the pressed key  is indeed the plus sign, then the code increments the value 
 
 If the pressed key is instead the minus sign (-), then the code decrements the value of pixelSize by 5 and resizes the video element to be larger by a factor of pixelSize. This effectively zooms out from the video.
 
-4. Results 
+## 4. Results 
 
 
 
@@ -97,7 +97,7 @@ If the pressed key is instead the minus sign (-), then the code decrements the v
 |![](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgR393LiDJ_0vqmpxyEcTIM2eGHS3pmWgD6UsvqVY1MMFq0Npky09tcNNk0_hrSYcVemjFSu4iM-Ev9Cgw2uuTMtJsuYfsQ64MdYbB3cGTu-UXf665tc27wcMqOwMwzBJNCuqGbROo7--YfQT8RfZNxVire_8TMxWcgLVWo6ulG6EiSRRbeIdKS4SoR/w611-h456/Aspose.Words.da6eceef-8a32-4a03-8210-228d3da7629c.008.png)|![](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgRoYB073C-1OvOsYUB_nhmW6V9xcm_u5avhgXRWTtk1j9ao58s0kyRewsG1IgdUISlfgbArfc95Uj0tu3XeKFrLI5ljLO9Eebl3Q5z1YEF65pJMBRcZcFl7lgUSGIMvIFK2qwOvU9l3RLtQSfJXRrZpQhJp5kTlfRzrxfcSdQmK0bcefoRUTcssGz7/w607-h377/Aspose.Words.da6eceef-8a32-4a03-8210-228d3da7629c.009.png)|
 
 
-5. Discussion  
+## 5. Discussion  
 
 The use of technology has transformed many aspects of our lives. One area that has seen significant advancements is video processing. One such development is the pixelation technique used in videos, which is a popular feature in many video editing applications. This report will discuss the use of color average with p5.js to create a video pixelator.
 
@@ -117,7 +117,7 @@ Step 5: The final pixelated video was displayed on the user's screen.
 
 The  video  pixelator  created  using  color  average  with  p5.js  was  successful  in pixelating the video. The pixelation effect was achieved by reducing the resolution of the video, and the color average algorithm was used to create the block of colors. The final pixelated video was displayed on the user's screen, and the effect was visible to the user.
 
-6. Conclusion:
+## 6. Conclusion:
 
 In  conclusion,  video  pixelation  is  a  popular  technique  used  in  video  editing applications. The color average algorithm is a common method used in pixelation, and it can be implemented using p5.js. The results of this experiment show that the use of color average with p5.js can successfully create a pixelated video. Further research  can  be  done  to  optimize  the  algorithm  and  improve  the  overall performance of the video pixelator.
 
