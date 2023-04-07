@@ -1,7 +1,5 @@
 # Group Members
 
-Details shortcode is a helper for `details` html5 element. It is going to replace `expand` shortcode.
-
 {{< details "Juliana Catalina De Castro Moreno" open>}}
 ## Juliana Catalina De Castro Moreno
 I am systems engineering student at the National university of Colombia. My interest are software architecture, cloud and project management. Moreover, I strongly agree with the fact that the life is for enjoy and for that reason I love to workout, hang out with friends, reading and being happy through a life balance. Over all, learning a lot of things each day. Finally, in this project I've worked on Color blindness and spatial coherence.
@@ -14,5 +12,5 @@ I am a Systems Engineering student at Universidad Nacional de Colombia. My inter
 
 {{< details "Daniel Felipe Vargas Gomez" open>}}
 ## Daniel Felipe Vargas Gomez
-Lorem markdownum insigne...
+I am a Systems and Computation Engineering student at Universidad Nacional de Colombia. My interests in this career include software architecture, competitive programming and algorithms. My interests in life include music, movies and art in general. In this project, I worked on some Moiré Patterns programs.
 {{< /details >}}

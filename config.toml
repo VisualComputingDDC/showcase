@@ -1,6 +1,6 @@
 baseURL = "https://VisualComputingDDC.github.io/showcase"
 languageCode = "en-us"
-title = "Showcase Template"
+title = "Visual Computing 2023-1 - G2 - DDC"
 theme = 'book'
 
 # Book configuration
