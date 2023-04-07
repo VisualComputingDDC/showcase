@@ -31,21 +31,47 @@ The authors developed a mobile application that helps colorblind people distingu
 
 1. function setup()
 
-<div>
-<p style = 'text-align:center;'>
-<img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiPB2RGYrUYYUa9RU6Y_L8oXOc673u1z4ULF4UjYB5Dsvy2qeD21FqMY5QUurwZttIfAHZaPJFRIOprQ-xlVDexj2g5NUejnEfXieWyw9XlTBj0jicwCi-3Q4P2xpVCIzXncP9QzBfWvnNGmGxY2nnxrvv8GqmnWBlRao_V1fCoYxE6zyao107JxOo9/w606-h272/Aspose.Words.b6ccd4e5-e4e7-47fc-8458-5b74fcd1364b.001.png" alt="results" width=100%>
-</p>
-</div>
+{{< details "Code" open >}}
+```javascript
+let capture;
+
+function setup() {
+  createCanvas(640, 480);
+  capture = createCapture(VIDEO);
+  capture.hide();
+}
+```
+{{< /details >}}
 
 The code initializes a variable called "capture" and defines a setup() function. In the "setup()" function, a canvas with a resolution of 640x480 pixels is created using the "createCanvas()" function. Then, a "capture" object is created to access the device's webcam using the "createCapture(VIDEO)" function. The "capture" object is hidden from the screen using the "hide()" function, which means that the webcam video will not be displayed on the canvas screen.
 
 2. function draw()
 
-<div>
-<p style = 'text-align:center;'>
-<img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhkcoR-shzUg6cFD60kAbifcAGAOM8V1ZoUpPExAUgoLVt5ZrnqLamFbIozjCllLQPx_K23qI2GoWCrcQ_sxexj40WEzTpZAezRcVeUjWf9eRlQILnQQ0dlQN9CsuS4GGFuzuYe7ncCmSm_ZYOW6vpAAOPEhJcvcs9ft3bcr_eZ04o9T8K0teenarcT/w605-h709/Aspose.Words.b6ccd4e5-e4e7-47fc-8458-5b74fcd1364b.002.png" alt="results" width=100%>
-</p>
-</div>
+{{< details "Code" open >}}
+```javascript
+function draw() {
+  background(255);
+  image(capture, 0, 0, 640, 480);
+
+  loadPixels();
+  for (let i = 0; i < pixels.length; i += 4) {
+    let r = pixels[i];
+    let g = pixels[i + 1];
+    let b = pixels[i + 2];
+    let a = pixels[i + 3];
+
+    // apply color mapping algorithm
+    let color = mapColor(r, g, b);
+
+    pixels[i] = color.r;
+    pixels[i + 1] = color.g;
+    pixels[i + 2] = color.b;
+    pixels[i + 3] = a;
+  }
+  updatePixels();
+}
+```
+{{< /details >}}
 
 This code is a drawing function that runs continuously in a loop in an image or graphics processing environment such as p5.js. The first line of code declares a variable called "capture", but no value is assigned to this variable in the provided code snippet.
 
@@ -57,22 +83,41 @@ After  applying  the  color  mapping  algorithm,  the  code  updates  the  pixel
 
 3. function mapColor(r, g, b) {
 
-<div>
-<p style = 'text-align:center;'>
-<img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgbryKr4cYhJ2uTlwJVUwV_-nkR-yxxb3C5LNUC2a7KC9_ougvJTs4DmOtFVMg2IGd9q_lvg5nil7CRmVpIf5bpxNkUhdInxuE2OF9qfJ9JbV-8P480VzHFKLt-nuSf-OVLxJ8WyNKGcVb1BSIgZ1AeNCvla8zP8t9ID3TVotJsCCRWe7CXFcUqK8RD/w603-h301/Aspose.Words.b6ccd4e5-e4e7-47fc-8458-5b74fcd1364b.003.png" alt="results" width=100%>
-</p>
-</div>
+{{< details "Code" open >}}
+```javascript
+function mapColor(r, g, b) {
+  // apply color mapping algorithm here
+  // return an object with r, g, b properties
+  // representing the mapped color
+  return {r: r, g: g, b: b};
+}
+```
+{{< /details >}}
 
 The code defines a function called mapColor that takes three numeric parameters: r, g, and b that represent the red, green, and blue values of a color. Within the function, there is a color mapping algorithm that is applied to these values and then an object with properties r, g, and b representing the mapped color is returned.
 
 4. function mapColor(r, g, b) {
 
-<div>
-<p style = 'text-align:center;'>
-<img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjdsH7JZbJEeOXtjWlilC3gJbtpArtibowwGLfjZyHXI-IQG_8oViXjdbwNBUeDEKrT9n1rcBXgRybhCL1A5czbXgo5yrMPcNQ278nmODUCvo0Iym_NwS9WkQpwZxKFyyoB6zrPXyKWrkf08elgIxeWGiQdM8NugvPXC9AIJsJFtm8wK5n_5-tsIQBe/w600-h545/Aspose.Words.b6ccd4e5-e4e7-47fc-8458-5b74fcd1364b.004.png" alt="results" width=100%>
-</p>
-</div>
+{{< details "Code" open >}}
+```javascript
+function mapColor(r, g, b) {
+  // simulate deuteranopia (green-blindness)
+  let r2 = 0.625 * r + 0.375 * g + 0.0 * b;
+  let g2 = 0.7 * r + 0.3 * g + 0.0 * b;
+  let b2 = 0.0 * r + 0.3 * g + 0.7 * b;
 
+  // normalize colors to the range [0, 255]
+  let maxVal = max(r2, g2, b2);
+  if (maxVal > 255) {
+    r2 = 255 * r2 / maxVal;
+    g2 = 255 * g2 / maxVal;
+    b2 = 255 * b2 / maxVal;
+  }
+
+  return {r: r2, g: g2, b: b2};
+}
+```
+{{< /details >}}
 This is a JavaScript function named mapColor that takes in three parameters r, g, and b, representing the red, green, and blue values of a color, respectively. The function returns an object with three properties r, g, and b, representing the mapped color values.
 
 The  function  first  applies  a  transformation  to  the  input  color  to  simulate deuteranopia (green-blindness). This transformation changes the red, green, and blue values of the input color to new values r2, g2, and b2, respectively, based on a fixed set of coefficients.

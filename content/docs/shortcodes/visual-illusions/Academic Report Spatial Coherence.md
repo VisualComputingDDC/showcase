@@ -25,11 +25,20 @@ M. Smith and Scott Kildall. Available at: [https://www.academia.edu/32193047/Pix
 ## 3. Methods
 1. function setup()
 
-<div>
-<p style = 'text-align:center;'>
-<img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgkUxxAW3ER8Y9SowSHgU1GAfRSV3pswThQReIVo6xCTdhcqPHVPS-xjkDcskG3f-lTFSryfIYa_TozM0LZcUcO5SXoo-DklfyoxYrfJdT4buEsUhkgyZAIrZ4uMIVoVTlqkzmL8dseFTzJWmG8MPyqH8C8zcBsfx6nBhJtBP-CN1y-bbq-hLwU2wlX/w613-h456/Aspose.Words.aceba8f3-33af-46ac-b851-3fefd2b8b8ac.001.png" alt="setup" width=100%>
-</p>
-</div>
+{{< details "Code" open >}}
+```javascript
+let video;
+let scaleFactor = 16; // adjust this value to change the pixel size
+
+function setup() {
+  createCanvas(640, 480);
+  pixelDensity(1);
+  video = createCapture(VIDEO);
+  video.size(width/scaleFactor, height/scaleFactor);
+  video.hide();
+}
+```
+{{< /details >}}
 
 This code sets up a canvas in the web browser that displays a video feed from the user's webcam using p5.js library. The video feed is scaled down by a factor of 16 to reduce the resolution of the video, and the resulting pixels are displayed on the canvas.
 
@@ -47,11 +56,34 @@ In the "setup" function, the following occurs:
 - The "hide" function is called on the video capture object, which hides the video element from the web page.
 2. function pixelate()
 
-<div>
-<p style = 'text-align:center;'>
-<img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgMb-0Vp-E7d8xaxeoxbBMYL5q9qwiUHAHk90TGoz4OO3DEqlIaXMFK7UpbftqmYDo5YUaywWcnuOzPj9UzLWZbUYBIpRnLf-_3rKjMMMCuEbhuIRy6Y3hG8rlhSxu2aOJf6ch7retzOt29jPXBjPbaC95alqMqvKUQnA2CxZ8bbhQ2uV7oEjc1-Ytv/w612-h837/Aspose.Words.aceba8f3-33af-46ac-b851-3fefd2b8b8ac.002.png" alt="pixelate" width=100%>
-</p>
-</div>
+{{< details "Code" open >}}
+```javascript
+function pixelate() {
+  loadPixels();
+  for (let y = 0; y < height; y += scaleFactor) {
+    for (let x = 0; x < width; x += scaleFactor) {
+      let index = 4 * (x + y * width);
+      let r = pixels[index];
+      let g = pixels[index + 1];
+      let b = pixels[index + 2];
+      let a = pixels[index + 3];
+      for (let i = 0; i < scaleFactor; i++) {
+        for (let j = 0; j < scaleFactor; j++) {
+          let ii = i + x;
+          let jj = j + y;
+          let idx = 4 * (ii + jj * width);
+          pixels[idx] = r;
+          pixels[idx + 1] = g;
+          pixels[idx + 2] = b;
+          pixels[idx + 3] = a;
+        }
+      }
+    }
+  }
+  updatePixels();
+}
+```
+{{< /details >}}
 
 This is a JavaScript function that pixelates an image. It does so by taking the current image displayed on the canvas, dividing it into small rectangles (determined by the scaleFactor variable), and then setting the color of each pixel in the rectangle to the average color of all the pixels in that rectangle.
 
@@ -93,11 +125,14 @@ This updates the canvas with the new pixel values.
 
 3. function draw()
 
-<div>
-<p style = 'text-align:center;'>
-<img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgDeFfQKk8hPx8tMU6FOAlv3jqvpHzElFw8ev1LkeEDZOrDtot56L8GJGDuJ9nvAsCPG4asF2gmlIMk6kx3Ncy0TTarERGkz_LVslP4_fZWSNxlXAllwTeMDuaS25XyPprrAtOv7jzNLJ0kWvYxNpnjTJ08pxgUYeQCuU_ZXw4Gkws7TXitxZjXahmQ/w614-h204/Aspose.Words.aceba8f3-33af-46ac-b851-3fefd2b8b8ac.003.png" alt="draw" width=100%>
-</p>
-</div>
+{{< details "Code" open >}}
+```javascript
+function draw() {
+  image(video, 0, 0, width, height);
+  pixelate();
+}
+```
+{{< /details >}}
 
 This code is a part of a program that uses the p5.js library to manipulate and display visual content in a web browser.
 

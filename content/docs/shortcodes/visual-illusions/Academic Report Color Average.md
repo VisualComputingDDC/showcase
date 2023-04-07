@@ -15,11 +15,19 @@ In addition to pixelation, the application also includes a color averaging featu
 ## 3. Methods 
 1. function setup() 
 
-<div>
-<p style = 'text-align:center;'>
-<img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgy1as1hxiI_3LHsFnlE_YpvC01gSagtlxne7uyQXltwtsYGkcP1Zm8mtxbI5HAzkL_2Ju79s9DuM8bV8WuSUzwRd2V6xAQyXmQQdtwNo6VHniup15ngaS7QmWyxNp1AYdDk8zcoZEtjilu8thfWP1VrSh3jixRNXS6_FkryM9h6vcd84oP-7uHZYVx/w609-h425/Aspose.Words.da6eceef-8a32-4a03-8210-228d3da7629c.001.png" alt="results" width=100%>
-</p>
-</div>
+{{< details "Code" open >}}
+```javascript
+let video;
+let pixelSize = 10;
+
+function setup() {
+  createCanvas(640, 480);
+  video = createCapture(VIDEO);
+  video.size(width/pixelSize, height/pixelSize);
+  video.hide();
+}
+```
+{{< /details >}}
 
 This is a JavaScript code using the p5.js library to create a canvas and capture video from the user's camera. Here is a breakdown of what each line does:
 
@@ -49,11 +57,26 @@ Hides the video capture object from the screen.
 
 2. Function draw()
 
-<div>
-<p style = 'text-align:center;'>
-<img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgG2IyPkgwhmdMWJyCiGjxurLfJ4J56_toYlY8uKmfQt4vfRhK0VzhMg6Kf0L4S3R7H_Dcjl7ety2jdjKJMTHI2XuPPC-E5fiIRL9eAPBG5fQGzuy8vevgwbqtcDxKpWrYiDuMFiIIPcUIqBwnPgMjNV-L4cIOfwHKY21juiXbKuuQjjJ8UnG1jEFQ9/w607-h642/Aspose.Words.da6eceef-8a32-4a03-8210-228d3da7629c.002.png" alt="results" width=100%>
-</p>
-</div>
+{{< details "Code" open >}}
+```javascript
+function draw() {
+  background(0);
+  video.loadPixels();
+
+  for (let y = 0; y < video.height; y++) {
+    for (let x = 0; x < video.width; x++) {
+      let index = (x + y * video.width) * 4;
+      let r = video.pixels[index];
+      let g = video.pixels[index+1];
+      let b = video.pixels[index+2];
+      fill(r, g, b);
+      noStroke();
+      rect(x*pixelSize, y*pixelSize, pixelSize, pixelSize);
+    }
+  }
+}
+```
+{{< /details >}}
 
 The function first sets the background color of the canvas to black (RGB value of 0,0,0) using the "background" function. Then, it loads the pixel data from a video source using the "loadPixels" method.
 
@@ -63,11 +86,19 @@ The function then sets the fill color to the extracted RGB values using the "fil
 
 3. Function KeyPressed()
 
-<div>
-<p style = 'text-align:center;'>
-<img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEghYtbqoVCKeRVewhR2PUhey9ylONJxSOMzrmoChGnTws2R1_3nLcEWp3WUIBdK2ft7W_ZzBFqS3mhNdW4XgOiV48H8zdh2VTz9jYe6a8FSmkXtJ_BUd00fo39oPn0HKWo_aByIenWygOdHa_YXXrfVqwg5sYAzQkD5nmrxN3kTPtAQQ5WlOdPsAITt/w607-h358/Aspose.Words.da6eceef-8a32-4a03-8210-228d3da7629c.003.png" alt="results" width=100%>
-</p>
-</div>
+{{< details "Code" open >}}
+```javascript
+function keyPressed() {
+  if (key == '+') {
+    pixelSize += 5;
+    video.size(width/pixelSize, height/pixelSize);
+  } else if (key == '-') {
+    pixelSize -= 5;
+    video.size(width/pixelSize, height/pixelSize);
+  }
+}
+```
+{{< /details >}}
 
 This code defines a function called keyPressed() which is executed whenever a key is pressed on the keyboard while the program is running.
 
