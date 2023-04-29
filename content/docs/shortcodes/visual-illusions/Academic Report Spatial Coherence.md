@@ -160,6 +160,8 @@ The pixelate() function is likely a custom function that pixelates the image, ei
 | - | - |
 |![results](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjcd8LKmB4ntqqiOLIZ_p7nP56ObX9yQ7kbhAdGJbCw9oWWZzJatiISK2edDjdLQg5WzkiGCKUXqqxfw6JCp3cbfH0RMXzLFJYbI1qIAA5QIsG4hbuw4Jx1FSxllb4sXzCFEgJhWU69fbYK2lzGtQTWb06E_fwJURkvSNq6r_R0jCXwOTy5xPqY0rhs/w613-h462/Aspose.Words.aceba8f3-33af-46ac-b851-3fefd2b8b8ac.008.jpeg)|![results](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjyfPNkNCYPqb_Zgeu6seOsoZnVg6rV38SBFBZHOiFRmyWfDWrIHHPL26nWjNyNld5S2ayAo9sigHpf5IH0OJumAh8c2HU7bycFYPzNzdZDF-abCglCOsAxK2zLDsXPQ5DQY9n2uVqubnxb2kyirU3E9osUHySiIfd7UDrwYKl1RAxd1cVcskVU82vk/w611-h813/Aspose.Words.aceba8f3-33af-46ac-b851-3fefd2b8b8ac.009.jpeg)|
 
+{{< p5-iframe sketch="/showcase/sketches/spatial_coherence.js" width="825" height="825" >}}
+
 ## 5. Discussion
 
 Pixelation is a technique used in video and animation to reduce image resolution, usually for aesthetic reasons. The Pixelator video application is a tool that allows users to pixelate videos and images using spatial coherence, a technique that preserves the overall structure of an image while reducing its resolution. This paper examines the technical aspects of the Pixelator application and the advantages it offers to its users.

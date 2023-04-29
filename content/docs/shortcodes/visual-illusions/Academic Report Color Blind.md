@@ -144,6 +144,8 @@ Finally, the function returns an object with properties r, g, and b containing t
 | - | - |
 |![](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiySh4EH9VkoBA0s_6UdZaJxv4UON2AmmnyPnAEjucyjYEY2L-LmVdHtPqPiV9ks_opZi5pp0O0cwNQYLTHZnFiDz0TNYkmrj9mPwByHGMUNrMZbLMZDcic6psUdgrcAVwxdT51AD1y8U45a6kmpUYFCa_UMXA3QfwW2D9ReZI4B5xVpBKK6hq4QkYI/w604-h454/Aspose.Words.b6ccd4e5-e4e7-47fc-8458-5b74fcd1364b.009.jpeg)|![](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEh2UyoD2nT3fBR9pdtJ8hvA_eiJiBojFS61B-z1QIjX65TWV9Adi7PKOnyjIE0fN4i6HUzznAGovDxMqWtpojFpRcN4qVFeXifLoMzw5hVK8D1CF1gAqgvHL-xvr1wVWQCrtMt9cgXThVGccZim9NDQNJ5RutT9wTImDF6dyYwsPO0tMD6t7U6riYrB/w604-h458/Aspose.Words.b6ccd4e5-e4e7-47fc-8458-5b74fcd1364b.010.jpeg)|
 
+{{< p5-iframe sketch="/showcase/sketches/color_blindness.js" width="825" height="825" >}}
+
 ## 5. Discussion  
 
 Color blindness is a condition that affects millions of people worldwide, making it difficult  for  them  to  distinguish  between  different  colors.  However,  with  the advancements  in  technology,  several  color  mapping  applications  have  been developed that can help people who are color blind see the colors around them. In this report, we will discuss one such application, its features, and its effectiveness.

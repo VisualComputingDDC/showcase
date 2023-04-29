@@ -127,6 +127,7 @@ If the pressed key is instead the minus sign (-), then the code decrements the v
 | - | - |
 |![](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgR393LiDJ_0vqmpxyEcTIM2eGHS3pmWgD6UsvqVY1MMFq0Npky09tcNNk0_hrSYcVemjFSu4iM-Ev9Cgw2uuTMtJsuYfsQ64MdYbB3cGTu-UXf665tc27wcMqOwMwzBJNCuqGbROo7--YfQT8RfZNxVire_8TMxWcgLVWo6ulG6EiSRRbeIdKS4SoR/w611-h456/Aspose.Words.da6eceef-8a32-4a03-8210-228d3da7629c.008.png)|![](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgRoYB073C-1OvOsYUB_nhmW6V9xcm_u5avhgXRWTtk1j9ao58s0kyRewsG1IgdUISlfgbArfc95Uj0tu3XeKFrLI5ljLO9Eebl3Q5z1YEF65pJMBRcZcFl7lgUSGIMvIFK2qwOvU9l3RLtQSfJXRrZpQhJp5kTlfRzrxfcSdQmK0bcefoRUTcssGz7/w607-h377/Aspose.Words.da6eceef-8a32-4a03-8210-228d3da7629c.009.png)|
 
+{{< p5-iframe sketch="/showcase/sketches/color_average.js" width="825" height="825" >}}
 
 ## 5. Discussion  
 
