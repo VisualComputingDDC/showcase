@@ -9,7 +9,7 @@ For this exercise, the HSV value V and HSL Lightness L coloring brightness tools
 
 HSL (for hue, saturation, lightness) and HSV (for hue, saturation, value; also known as HSB, for hue, saturation, brightness) are alternative representations of the RGB color model, designed in the 1970s by computer graphics researchers. In these models, colors of each hue are arranged in a radial slice, around a central axis of neutral colors which ranges from black at the bottom to white at the top (Zenil, n.d.).
 
-<img src="https://lh3.googleusercontent.com/pw/AJFCJaUIRXVPjGQoZ18tc79wk7ZIaQjKrjBvhX2dZvKLglkKgcO8WbnFv3ozMui6QCA1-vyrqoD0uhmfEQArGNzmA0XbzwSGy_NHcL8sc7sAkuLL5bVqsE05AZnfqZvrzyP17_nQiXdt1V0x_hM2BbeCa2i4rxEAlQNFQ9iVp91-W11VBMqdr0bmMz5I5Q-hfvopFBxTigmj2oPog0giL2Nug2wbkAIuGGgOUeIo6MWMI_cyBuKJyj70C7Wz62kHdtifcuxUVLOVr1gl1WYv5rlTLu9PWW9M1qZEnmTV9UESj7M5p9BJnAS3bRUvexTMsQ6XmSxrxQT-km5iUyOnzIWvIT2exUdsARPkdtfRXyYvtc42ojlEad5Xc8YOdkb6NdR9AFn011GSx-ltBV52j-Tq7KxY-TgbiStGG2AZTX5jM31KGnn5rSKK8Un7DdPCCW1YSZJk8-1l39dntQKvCEn6jqBu2U0uDxONWAAYpQl9CaRCrJs1stHeeXao7llueptuI52jAZ6Bw7LokCLZrxoOOLVjFaWB_gFCuPHXbca0shrzs1VKcG3RGEZxFeCKT4Y3yASqGHTqQ9yl5EOhOzaZyr7HbQOWhqcoFO_ZyEFZoJhOZKQvNGIFZDu7eZvpC0jnXaYzIjeqLcOJx5TTbsSFjf_dzuGBKtC0-BKc_2dZyxrJvJD2BR131__o4JWT5duUUllHdbWjHkz6K5U84fiTWZX-vFl9GgvT0vRohK08qhpaX42i80lO_T6ibtmRr7EfmL-zmvHh8Vukhee9cS3TanSmvMzb4Xon07JQXq9d9lsrCkIaCf0WKq6CW6gjXgWsWuMw8HWwfnWcMPdbhDzAWSVo8thyN9f6kCU0zt1p5zMoaUv-b8K7xZh7B4voXKTEEVZ2V6ygBl8HQiubq8ujuxXuCpNkCukMcIaMe8X5KhdLDl4ikKI=w800-h400-s-no?authuser=1" alt="results" width=80% ></img>   
+<img src="https://drive.google.com/uc?export=view&id=1c3ave6YFFim_U4l-N4DOEqYAA3cE0gYy" alt="results" width=80% ></img>   
 
 _Figure 1. HSL and HSV cut-away 3D models._
 
