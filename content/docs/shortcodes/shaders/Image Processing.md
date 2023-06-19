@@ -19,7 +19,7 @@ For this exercise, different kernels of differents sizes were used, to generate 
 
 There exist various applications of Image Processing, like facial expression recognition using thermal image processing, application of image processing to in-vitro human, matching of infrared and visual images, enhancement of satellite image, etc. (Carvalho, 2012)
 
-## 2. Code & results.
+## 2. Code & results
 {{< details "setup()" open >}}
 ```javascript
 function setup() {

@@ -34,7 +34,7 @@ In texturing, the V and L values can be used in the following ways:
 * Contrast control: The difference between the V or L values can influence the overall contrast of the texture. By adjusting these values, you can increase or decrease the contrast, which can be useful for emphasizing or softening certain details.
 
 
-## 2. Code & results.
+## 2. Code & results
 {{< details "setup()" open >}}
 ```javascript
 function setup() {

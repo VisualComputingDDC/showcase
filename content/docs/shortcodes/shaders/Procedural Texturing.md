@@ -9,7 +9,7 @@ In this exercise, two adapted patterns from the book of shaders (The Book of Sha
 
 There have been different approaches and implementations of procedural texturing, for example, for the simulation of the annual ring patterns of solid wood with knots (Procedural texturing of solid wood with knots, 2022) that can be studied in the biology field, simulation of clouds (Simulating clouds with procedural texturing techniques using the GPU, 2012), etc.
 
-## 2. Code & results.
+## 2. Code & results
 
 {{< details "setup()" open >}}
 ```javascript
