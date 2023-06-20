@@ -16,9 +16,55 @@ The fragment shader typically works by iterating over each pixel in the image an
 
 ## 2. Code & results
 
+{{< details "Blur.js" open >}}
+```javascript
+let blurShader;
+let img;
+
+function preload() {
+  img = loadImage('myImage.jpg');
+  blurShader = loadShader('convolution.vert', 'convolution.frag');
+}
+
+function setup() {
+  createCanvas(windowWidth, windowHeight, WEBGL);
+}
+
+function draw() {
+  shader(blurShader);
+  blurShader.setUniform('tex0', img);
+  blurShader.setUniform('texelSize', [1.0 / img.width, 1.0 / img.height]);
+  blurShader.setUniform('kernel', [
+    1, 1, 1,
+    1, 1, 1,
+    1, 1, 1
+  ]);
+  blurShader.setUniform('kernelWeight', 9.0);
+  rect(-width / 0, -height / 0, width, height);
+  
+}
+```
+{{< /details >}}
+
 - Blur.js
 
 In the preload() function, we load the image to apply the effect to the shader. In the setup() function, we create a canvas and set it to use WebGL. In the draw() function, we set the shader and set the necessary uniforms.
+
+{{< details "convolution.vert" open >}}
+```c
+precision highp float;
+
+attribute vec3 aPosition;
+attribute vec2 aTexCoord;
+
+varying vec2 vTexCoord;
+
+void main() {
+  vTexCoord = vec2(aTexCoord.x, 1.0 - aTexCoord.y); // Flip y-coordinate
+  gl_Position = vec4(aPosition, 1.0);
+}
+```
+{{< /details >}}
 
 - convolution.vert
 
@@ -35,6 +81,39 @@ The main() function is where the vertex shader does its work. Here's what it doe
 “vTexCoord = vec2(aTexCoord.x, 1.0 - aTexCoord.y);” : This line sets the value of vTexCoord to the same value as aTexCoord, but with the y coordinate flipped. This is because the texture coordinates in p5.js have the origin in the upper-left corner, while in OpenGL/WebGL they have the origin in the lower-left corner. Flipping the y coordinate ensures that the texture is sampled correctly.
 
 “gl\_Position = vec4(aPosition, 1.0);”: This line sets the position of the vertex in screen coordinates. It creates a vec4 with the x, y, and z coordinates of aPosition, and a w coordinate of 1.0. This is necessary because OpenGL/WebGL requires homogeneous coordinates for vertices.
+
+{{< details "convolution.frag" open >}}
+```c
+precision highp float;
+
+uniform sampler2D tex0;
+uniform vec2 texelSize;
+uniform float kernel[9];
+uniform float kernelWeight;
+
+varying vec2 vTexCoord;
+
+void main() {
+  vec2 texCoord = vec2(1.0 - vTexCoord.x, vTexCoord.y); // Flip x-coordinate
+  vec4 sum = vec4(0.0);
+  
+  
+
+
+  sum += texture2D(tex0, texCoord + vec2(-1.0, -1.0) * texelSize) * kernel[0];
+  sum += texture2D(tex0, texCoord + vec2(0.0, -1.0) * texelSize) * kernel[1];
+  sum += texture2D(tex0, texCoord + vec2(1.0, -1.0) * texelSize) * kernel[2];
+  sum += texture2D(tex0, texCoord + vec2(-1.0, 0.0) * texelSize) * kernel[3];
+  sum += texture2D(tex0, texCoord) * kernel[4];
+  sum += texture2D(tex0, texCoord + vec2(1.0, 0.0) * texelSize) * kernel[5];
+  sum += texture2D(tex0, texCoord + vec2(-1.0, 1.0) * texelSize) * kernel[6];
+  sum += texture2D(tex0, texCoord + vec2(0.0, 1.0) * texelSize) * kernel[7];
+  sum += texture2D(tex0, texCoord + vec2(1.0, 1.0) * texelSize) * kernel[8];
+
+  gl_FragColor = sum / kernelWeight;
+}
+```
+{{< /details >}}
 
 - convolution.frag
 
@@ -67,6 +146,8 @@ The next 9 lines are where the convolution is performed. Each line calculates th
 - Image.jpg with the convolution(Blur) postEffect
 
 ![](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhiYVpDKSIzcUuVT2c0iOeFmZ0JW8jX_K0pg-B_R4npT2TB55kVypkD0wri-VenQNasJy7m3QfZGaiAn3nWoA1tD3QogZvmD6jPJiXD6ZpwolYR9fql1SPYhxdnwj2vSLeE3o0Zh6Dqp9IpayjgQ2UyOdseHMJbvNCEkBN5lmidPULn-dBeZtI3yyrsoe8/s320/Aspose.Words.1b5bab1f-6071-49b8-80e4-36b65e7a4849.002.png)
+
+{{< p5-iframe sketch="/showcase/sketches/post_effects.js" lib1="https://cdn.jsdelivr.net/gh/VisualComputing/p5.treegl/p5.treegl.js" width="700" height="400" >}}
 
 ## 3. Conclusion
 The implementation of post-effects using convolution shaders in p5.js offers a powerful way to manipulate and enhance images in real-time. Convolution, a mathematical operation combining functions, is leveraged to apply various effects such as blurring, sharpening, and edge detection. The convolution operation is performed within a fragment shader, which runs on the GPU and can handle parallelized operations efficiently. The fragment shader iterates over each pixel in the image, applying a convolution kernel to calculate a weighted sum of surrounding pixel values. This process results in a new convolved pixel value. The vertex shader, responsible for transforming input texture coordinates to output vertex positions, typically requires minimal modification for different convolution effects.

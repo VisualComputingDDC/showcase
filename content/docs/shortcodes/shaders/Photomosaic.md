@@ -1,4 +1,4 @@
-# Phptomosaic
+# Photomosaic
 
 ## 1. Introduction & Background
 Photomosaic is a technique in visual computing that involves creating a larger image by assembling numerous smaller images called tiles. These tiles, often small photographs or images, are carefully chosen to replicate the colors and patterns of specific regions within the larger target image. When viewed from a distance, the tiles blend together to form a cohesive and visually appealing composition. Photomosaic has gained popularity as a creative and artistic way to transform images into stunning collages and visual representations.
