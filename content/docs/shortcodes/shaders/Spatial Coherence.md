@@ -25,6 +25,20 @@ Images that we use:
 
 ## 2. Code & results
 
+{{< details "Fragment shader code:" open >}}
+```c
+precision highp float;
+
+uniform sampler2D tex0;
+varying vec2 vTexCoord;
+
+void main() {
+  vec4 color = texture2D(tex0, vTexCoord);
+  float gray = dot(color.rgb, vec3(0.299, 0.587, 0.114));
+  gl_FragColor = vec4(vec3(gray), color.a);
+}
+{{< /details >}}
+
 **Fragment shader code:**
 
 - precision highp float;
@@ -56,6 +70,21 @@ This calculates the grayscale value of the pixel using the dot product of the co
 
 This sets the output color for the current pixel to a new vec4 value, where the RGB channels are set to the grayscale value (vec3(gray)) and the alpha channel is set to the alpha value of the input color (color.a).
 
+{{< details "Vertex shader code" open >}}
+```c
+attribute vec3 aPosition;
+attribute vec2 aTexCoord;
+
+uniform mat4 uModelViewMatrix;
+uniform mat4 uProjectionMatrix;
+
+varying vec2 vTexCoord;
+
+void main() {
+  gl_Position = uProjectionMatrix * uModelViewMatrix * vec4(aPosition, 1.0);
+  vTexCoord = aTexCoord;
+}
+{{< /details >}}
 **Vertex shader code:**
 
 - attribute vec3 aPosition;
@@ -97,6 +126,8 @@ This line assigns the texture coordinates for the current vertex (aTexCoord) to 
 3\. La Gioconda - Leonardo Da Vinci.
 
 ![](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgrZoUMIyNtHUZggW-IlwNraf6Ji5kCt1SXUC-9cfQVTv8_XfPk0gmpfjGRYfy6OK2l58J_Tvh09hliqZMceOYb-Z6e6Cwy-ISb0hQ1rNK5nVjnx0cDnNR497UzPPs7P-t3ZfvIQTG7TPOaJ2Z8sxeDEZNcOg754-M9LYsg_hciUMoE1eiPsM2zyR-kK9g/s1600/Aspose.Words.2a55bee0-0933-45e2-bef1-40574ab4a90d.006.jpeg)
+
+{{< p5-iframe sketch="/showcase/sketches/spatial_coherence.js" lib1="https://cdn.jsdelivr.net/gh/VisualComputing/p5.treegl/p5.treegl.js" width="660" height="505" >}}
 
 ## 3. Conclusion
 
